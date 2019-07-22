@@ -27,7 +27,8 @@ class SearchDataSource:NSObject, UITableViewDelegate {
     }
        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.vc.performSegue(withIdentifier: "toDetails", sender: self.shows[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

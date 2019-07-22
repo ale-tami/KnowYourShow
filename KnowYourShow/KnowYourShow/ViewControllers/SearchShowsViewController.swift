@@ -41,6 +41,13 @@ class SearchShowsViewController: UIViewController, UIScrollViewDelegate {
         self.searchBar.delegate = self.tableViewDataSource
         self.searchBar.placeholder = "Search by Show name"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let show = sender as? Show else { return }
+        if let vc = segue.destination as? DetailsTableViewController{
+            vc.show = show
+        }
+    }
 }
 
 extension SearchShowsViewController:ShowSearchDelegate {

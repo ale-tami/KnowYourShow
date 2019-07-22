@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FA8EBBD7214E470AD71BFEA /* Pods_KnowYourShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D78968E1908E7B08E6B44E4 /* Pods_KnowYourShow.framework */; };
+		A913364922E6468B00416AAD /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913364822E6468A00416AAD /* DetailsTableViewController.swift */; };
 		A965CA4622E3DA8500494C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965CA4522E3DA8500494C95 /* AppDelegate.swift */; };
 		A965CA4B22E3DA8500494C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4922E3DA8500494C95 /* Main.storyboard */; };
 		A965CA4D22E3DA8600494C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4C22E3DA8600494C95 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		1D78968E1908E7B08E6B44E4 /* Pods_KnowYourShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KnowYourShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0ED0ADEA9A745305ED432C /* Pods-KnowYourShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourShow.release.xcconfig"; path = "Target Support Files/Pods-KnowYourShow/Pods-KnowYourShow.release.xcconfig"; sourceTree = "<group>"; };
 		848861A4A8BF65E554A74A8E /* Pods-KnowYourShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourShow.debug.xcconfig"; path = "Target Support Files/Pods-KnowYourShow/Pods-KnowYourShow.debug.xcconfig"; sourceTree = "<group>"; };
+		A913364822E6468A00416AAD /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		A965CA4222E3DA8500494C95 /* KnowYourShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowYourShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A965CA4522E3DA8500494C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A965CA4A22E3DA8500494C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		A965CA7322E3DABC00494C95 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A913364822E6468A00416AAD /* DetailsTableViewController.swift */,
 				A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -415,6 +418,7 @@
 				A9B55BCA22E518A200310AD8 /* SearchDataSource.swift in Sources */,
 				A9B55BCE22E51C2700310AD8 /* ServiceContext.swift in Sources */,
 				A96C73C822E61B43002CD4BA /* PaginatedShowsInteractor.swift in Sources */,
+				A913364922E6468B00416AAD /* DetailsTableViewController.swift in Sources */,
 				A96C73BE22E6007A002CD4BA /* DateFormatter+Extensions.swift in Sources */,
 				A9B55BD222E521FB00310AD8 /* ShowsService.swift in Sources */,
 				A965CA4622E3DA8500494C95 /* AppDelegate.swift in Sources */,
