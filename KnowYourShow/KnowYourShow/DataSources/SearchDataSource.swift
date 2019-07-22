@@ -96,28 +96,28 @@ extension SearchDataSource:UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let currentText = vc.searchBar.text ?? ""
-        if currentText.isEmpty {
-            self.update(shows: vc.paginateShowsinteractor.getCurrentPaginatedShows())
+        let currentText = self.vc.searchBar.text ?? ""
+        if currentText.isEmpty && searchText.isEmpty{
+            self.update(shows: self.vc.paginateShowsinteractor.getCurrentPaginatedShows())
             return
         }
         
-        startTimer()
+        self.startTimer()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        vc.searchBar.endEditing(true)
-        vc.view.endEditing(true)
+        self.vc.searchBar.endEditing(true)
+        self.vc.view.endEditing(true)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        vc.searchBar.endEditing(true)
-        vc.view.endEditing(true)
+        self.vc.searchBar.endEditing(true)
+        self.vc.view.endEditing(true)
         self.search(searchBar)
     }
     
     @objc private func search(_ searchBar: UISearchBar) {
         self.stopTimer()
-        vc.
+        self.vc.paginateShowsinteractor.getShows(with: vc.searchBar.text ?? "")
     }
 }

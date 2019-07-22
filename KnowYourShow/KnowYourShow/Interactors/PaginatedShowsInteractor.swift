@@ -41,9 +41,7 @@ class PaginatedShowsInteractor {
         ShowsService().getAllShows(with: self.page, successHandler: { [unowned self] (shows) in
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
-                self.shows.append(contentsOf: shows)
-                self.delegate?.receivedShows(shows: self.shows)
-                self.page += 1
+                self.delegate?.receivedShows(shows: shows)
             }
             }, failureHandler: { [unowned self] (str) in
                 SVProgressHUD.dismiss()

@@ -32,6 +32,8 @@ class ShowsService: NSObject {
                 } catch {
                     failureHandler("Could not get JSON \(error)")
                 }
+            } else if error != nil {
+                failureHandler(error?.localizedDescription ?? "")
             }
             
         }.resume()
@@ -59,8 +61,10 @@ class ShowsService: NSObject {
                 } catch {
                     failureHandler("Could not get JSON \(error)")
                 }
+            } else if error != nil {
+                failureHandler(error?.localizedDescription ?? "")
             }
             
-            }.resume()
+        }.resume()
     }
 }

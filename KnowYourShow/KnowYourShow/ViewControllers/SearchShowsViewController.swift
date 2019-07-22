@@ -19,23 +19,28 @@ class SearchShowsViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupTableView()
+        self.setupInteractor()
+        self.setUpSearchController()
+    }
+    
+    private func setupTableView() {
         self.tableView.register(UINib(nibName: "EntertainmentTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         //Purpousfully tightly coupled, it must be a 1-1 relationship, and usually these 2 go in the same file, but i prefer to have them separated to keep the vc as thin as possible
         self.tableViewDataSource = SearchDataSource(vc: self)
         self.tableView.delegate = tableViewDataSource
         self.tableView.dataSource = tableViewDataSource
-        
+    }
+    
+    private func setupInteractor(){
         self.paginateShowsinteractor.delegate = self
         self.paginateShowsinteractor.getShows()
-        
-        self.setUpSearchController()
     }
     
     private func setUpSearchController() {
         self.searchBar.delegate = self.tableViewDataSource
         self.searchBar.placeholder = "Search by Show name"
     }
-
 }
 
 extension SearchShowsViewController:ShowSearchDelegate {
@@ -46,6 +51,5 @@ extension SearchShowsViewController:ShowSearchDelegate {
     func failedToReceiveShow(errorStr: String) {
         AlertHelper.presentErrorAlert(with: errorStr, in: self)
     }
-    
     
 }

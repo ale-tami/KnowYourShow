@@ -72,9 +72,6 @@
                                     <constraint firstAttribute="height" constant="44" id="iLj-DV-Dl0"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="zpo-Ei-wyW" id="fbu-aJ-kQd"/>
-                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RYk-mm-t7j">
                                 <rect key="frame" x="0.0" y="132" width="414" height="681"/>
@@ -96,7 +93,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Shows" id="B51-sC-zIf"/>
                     <connections>
-                        <outlet property="searchBar" destination="iNd-bc-ubV" id="zFg-4W-8VB"/>
+                        <outlet property="searchBar" destination="iNd-bc-ubV" id="fes-Qe-PLG"/>
                         <outlet property="searchDisplayController" destination="NEC-Ej-qek" id="mLU-qu-Zck"/>
                         <outlet property="tableView" destination="RYk-mm-t7j" id="haS-QO-8ce"/>
                     </connections>
@@ -105,7 +102,6 @@
                 <searchDisplayController id="NEC-Ej-qek">
                     <connections>
                         <outlet property="delegate" destination="zpo-Ei-wyW" id="Sic-Bl-G1k"/>
-                        <outlet property="searchBar" destination="iNd-bc-ubV" id="mfO-v0-l8d"/>
                         <outlet property="searchContentsController" destination="zpo-Ei-wyW" id="Ovt-1Z-V0U"/>
                         <outlet property="searchResultsDataSource" destination="zpo-Ei-wyW" id="tvW-Pb-Xib"/>
                         <outlet property="searchResultsDelegate" destination="zpo-Ei-wyW" id="1vU-mE-9ig"/>
