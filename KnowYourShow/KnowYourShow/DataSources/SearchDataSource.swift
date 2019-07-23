@@ -9,13 +9,16 @@
 import UIKit
 import Kingfisher
 
-
+protocol SearchDataSourceDelegate {
+    func showSelected(show:Show)
+}
 class SearchDataSource:NSObject, UITableViewDelegate {
     
     private weak var vc:SearchShowsViewController!
     private var shows:[Show] = []
     private var lastRowIndexPath:IndexPath!
     private var timer: Timer!
+    var delegate:SearchDataSourceDelegate?
 
     init(vc:SearchShowsViewController) {
         self.vc = vc
@@ -28,7 +31,7 @@ class SearchDataSource:NSObject, UITableViewDelegate {
        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.vc.performSegue(withIdentifier: "toDetails", sender: self.shows[indexPath.row])
+        self.delegate?.showSelected(show: self.shows[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

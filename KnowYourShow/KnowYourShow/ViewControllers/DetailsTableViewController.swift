@@ -91,6 +91,13 @@ class DetailsTableViewController: UITableViewController {
         return newSize.height + 20
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let episode = sender as? Episode else { return }
+        if let vc = segue.destination as? EpisodeDetailTableViewController{
+            vc.episode = episode
+        }
+    }
+    
 }
 
 extension DetailsTableViewController:SeasonsViewControllerDelegate {
@@ -99,7 +106,7 @@ extension DetailsTableViewController:SeasonsViewControllerDelegate {
     }
     
     func didSelectEpisode(episode: Episode) {
-        
+        self.performSegue(withIdentifier: "toEpisodeDetail", sender: episode)
     }
     
     

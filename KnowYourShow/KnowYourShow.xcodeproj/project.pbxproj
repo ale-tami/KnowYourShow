@@ -16,6 +16,7 @@
 		A913365322E6727900416AAD /* EpisodesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913365222E6727900416AAD /* EpisodesDelegate.swift */; };
 		A925B78C22E7338000076508 /* SeasonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78B22E7338000076508 /* SeasonsDataSource.swift */; };
 		A925B78E22E73D5000076508 /* EpisodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78D22E73D5000076508 /* EpisodesService.swift */; };
+		A925B79022E777DB00076508 /* EpisodeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */; };
 		A965CA4622E3DA8500494C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965CA4522E3DA8500494C95 /* AppDelegate.swift */; };
 		A965CA4B22E3DA8500494C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4922E3DA8500494C95 /* Main.storyboard */; };
 		A965CA4D22E3DA8600494C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4C22E3DA8600494C95 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		A913365222E6727900416AAD /* EpisodesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesDelegate.swift; sourceTree = "<group>"; };
 		A925B78B22E7338000076508 /* SeasonsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsDataSource.swift; sourceTree = "<group>"; };
 		A925B78D22E73D5000076508 /* EpisodesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesService.swift; sourceTree = "<group>"; };
+		A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailTableViewController.swift; sourceTree = "<group>"; };
 		A965CA4222E3DA8500494C95 /* KnowYourShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowYourShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A965CA4522E3DA8500494C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A965CA4A22E3DA8500494C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */,
 				A913364A22E663DF00416AAD /* SeasonsViewController.swift */,
 				A913364B22E663DF00416AAD /* SeasonsViewController.xib */,
+				A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				A913364C22E663DF00416AAD /* SeasonsViewController.swift in Sources */,
 				A913365122E6720A00416AAD /* EpisodesInteractor.swift in Sources */,
 				A9B55BD022E51EFA00310AD8 /* Show.swift in Sources */,
+				A925B79022E777DB00076508 /* EpisodeDetailTableViewController.swift in Sources */,
 				A9B55BC722E516C300310AD8 /* SearchShowsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

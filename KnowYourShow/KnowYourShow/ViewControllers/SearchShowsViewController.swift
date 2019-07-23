@@ -28,6 +28,7 @@ class SearchShowsViewController: UIViewController {
         self.tableView.register(UINib(nibName: "EntertainmentTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         //Purpousfully tightly coupled, it must be a 1-1 relationship, and usually these 2 go in the same file, but i prefer to have them separated to keep the vc as thin as possible
         self.tableViewDataSource = SearchDataSource(vc: self)
+        self.tableViewDataSource.delegate = self
         self.tableView.delegate = tableViewDataSource
         self.tableView.dataSource = tableViewDataSource
     }
@@ -59,4 +60,10 @@ extension SearchShowsViewController:ShowsDelegate {
         AlertHelper.presentErrorAlert(with: errorStr, in: self)
     }
     
+}
+
+extension SearchShowsViewController:SearchDataSourceDelegate {
+    func showSelected(show: Show) {
+         self.performSegue(withIdentifier: "toDetails", sender: show)
+    }
 }
