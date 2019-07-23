@@ -1,5 +1,5 @@
 //
-//  PaginatedShowsInteractor.swift
+//  ShowsInteractor.swift
 //  KnowYourShow
 //
 //  Created by Alejandro Cesar Tami on 22/07/2019.
@@ -8,9 +8,10 @@
 
 import UIKit
 import SVProgressHUD
-class PaginatedShowsInteractor {
+
+class ShowsInteractor {
     
-    var delegate:ShowSearchDelegate?
+    var delegate:ShowsDelegate?
     private var page:Int = 0
     private var shows:[Show] = []
     

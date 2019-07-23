@@ -1,5 +1,5 @@
 //
-//  ShowSearchDelegate.swift
+//  ShowsDelegate.swift
 //  KnowYourShow
 //
 //  Created by Alejandro Cesar Tami on 22/07/2019.
@@ -7,7 +7,7 @@
 //
 
 
-protocol ShowSearchDelegate {
+protocol ShowsDelegate {
     func receivedShows(shows:[Show])
     func failedToReceiveShow(errorStr:String)
 }

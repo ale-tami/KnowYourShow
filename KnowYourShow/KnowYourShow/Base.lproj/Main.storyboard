@@ -156,7 +156,7 @@
         <!--Details Table View Controller-->
         <scene sceneID="tq7-fH-Qnk">
             <objects>
-                <tableViewController id="PEB-La-NbF" customClass="DetailsTableViewController" customModule="KnowYourMovie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PEB-La-NbF" customClass="DetailsTableViewController" customModule="KnowYourShow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zjn-OU-5PT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,6 +248,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="218" id="vTy-XZ-X3f">
+                                        <rect key="frame" x="0.0" y="436" width="414" height="218"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vTy-XZ-X3f" id="bTO-cB-CNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="217.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -263,6 +271,7 @@
                         <outlet property="releaseDateLabel" destination="sXw-g2-5L6" id="NrC-86-Q6C"/>
                         <outlet property="siteLabel" destination="x0T-Tx-Ro7" id="rnF-6Y-LKc"/>
                         <outlet property="titleLabel" destination="nCo-tO-O4P" id="aC2-M0-G5v"/>
+                        <outlet property="vcContainer" destination="bTO-cB-CNK" id="PGh-1M-8TQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKK-0V-pcv" userLabel="First Responder" sceneMemberID="firstResponder"/>

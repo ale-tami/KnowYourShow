@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0FA8EBBD7214E470AD71BFEA /* Pods_KnowYourShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D78968E1908E7B08E6B44E4 /* Pods_KnowYourShow.framework */; };
 		A913364922E6468B00416AAD /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913364822E6468A00416AAD /* DetailsTableViewController.swift */; };
+		A913364C22E663DF00416AAD /* SeasonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913364A22E663DF00416AAD /* SeasonsViewController.swift */; };
+		A913364D22E663DF00416AAD /* SeasonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A913364B22E663DF00416AAD /* SeasonsViewController.xib */; };
+		A913364F22E66D5F00416AAD /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913364E22E66D5F00416AAD /* Episode.swift */; };
+		A913365122E6720A00416AAD /* EpisodesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913365022E6720A00416AAD /* EpisodesInteractor.swift */; };
+		A913365322E6727900416AAD /* EpisodesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913365222E6727900416AAD /* EpisodesDelegate.swift */; };
+		A925B78C22E7338000076508 /* SeasonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78B22E7338000076508 /* SeasonsDataSource.swift */; };
+		A925B78E22E73D5000076508 /* EpisodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78D22E73D5000076508 /* EpisodesService.swift */; };
 		A965CA4622E3DA8500494C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965CA4522E3DA8500494C95 /* AppDelegate.swift */; };
 		A965CA4B22E3DA8500494C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4922E3DA8500494C95 /* Main.storyboard */; };
 		A965CA4D22E3DA8600494C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4C22E3DA8600494C95 /* Assets.xcassets */; };
@@ -19,8 +26,8 @@
 		A96C73C222E606BE002CD4BA /* EntertainmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C73C022E606BD002CD4BA /* EntertainmentTableViewCell.swift */; };
 		A96C73C322E606BE002CD4BA /* EntertainmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A96C73C122E606BD002CD4BA /* EntertainmentTableViewCell.xib */; };
 		A96C73C522E6119E002CD4BA /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C73C422E6119E002CD4BA /* AlertHelper.swift */; };
-		A96C73C822E61B43002CD4BA /* PaginatedShowsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C73C722E61B43002CD4BA /* PaginatedShowsInteractor.swift */; };
-		A96C73CA22E61BC1002CD4BA /* ShowSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C73C922E61BC1002CD4BA /* ShowSearchDelegate.swift */; };
+		A96C73C822E61B43002CD4BA /* ShowsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C73C722E61B43002CD4BA /* ShowsInteractor.swift */; };
+		A96C73CA22E61BC1002CD4BA /* ShowsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C73C922E61BC1002CD4BA /* ShowsDelegate.swift */; };
 		A9B55BC722E516C300310AD8 /* SearchShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */; };
 		A9B55BCA22E518A200310AD8 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B55BC922E518A200310AD8 /* SearchDataSource.swift */; };
 		A9B55BCE22E51C2700310AD8 /* ServiceContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B55BCD22E51C2700310AD8 /* ServiceContext.swift */; };
@@ -50,6 +57,13 @@
 		2F0ED0ADEA9A745305ED432C /* Pods-KnowYourShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourShow.release.xcconfig"; path = "Target Support Files/Pods-KnowYourShow/Pods-KnowYourShow.release.xcconfig"; sourceTree = "<group>"; };
 		848861A4A8BF65E554A74A8E /* Pods-KnowYourShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowYourShow.debug.xcconfig"; path = "Target Support Files/Pods-KnowYourShow/Pods-KnowYourShow.debug.xcconfig"; sourceTree = "<group>"; };
 		A913364822E6468A00416AAD /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
+		A913364A22E663DF00416AAD /* SeasonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsViewController.swift; sourceTree = "<group>"; };
+		A913364B22E663DF00416AAD /* SeasonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonsViewController.xib; sourceTree = "<group>"; };
+		A913364E22E66D5F00416AAD /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		A913365022E6720A00416AAD /* EpisodesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesInteractor.swift; sourceTree = "<group>"; };
+		A913365222E6727900416AAD /* EpisodesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesDelegate.swift; sourceTree = "<group>"; };
+		A925B78B22E7338000076508 /* SeasonsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsDataSource.swift; sourceTree = "<group>"; };
+		A925B78D22E73D5000076508 /* EpisodesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesService.swift; sourceTree = "<group>"; };
 		A965CA4222E3DA8500494C95 /* KnowYourShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowYourShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A965CA4522E3DA8500494C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A965CA4A22E3DA8500494C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,8 +80,8 @@
 		A96C73C022E606BD002CD4BA /* EntertainmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntertainmentTableViewCell.swift; sourceTree = "<group>"; };
 		A96C73C122E606BD002CD4BA /* EntertainmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntertainmentTableViewCell.xib; sourceTree = "<group>"; };
 		A96C73C422E6119E002CD4BA /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
-		A96C73C722E61B43002CD4BA /* PaginatedShowsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedShowsInteractor.swift; sourceTree = "<group>"; };
-		A96C73C922E61BC1002CD4BA /* ShowSearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSearchDelegate.swift; sourceTree = "<group>"; };
+		A96C73C722E61B43002CD4BA /* ShowsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsInteractor.swift; sourceTree = "<group>"; };
+		A96C73C922E61BC1002CD4BA /* ShowsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsDelegate.swift; sourceTree = "<group>"; };
 		A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchShowsViewController.swift; sourceTree = "<group>"; };
 		A9B55BC922E518A200310AD8 /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
 		A9B55BCD22E51C2700310AD8 /* ServiceContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContext.swift; sourceTree = "<group>"; };
@@ -173,6 +187,8 @@
 			children = (
 				A913364822E6468A00416AAD /* DetailsTableViewController.swift */,
 				A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */,
+				A913364A22E663DF00416AAD /* SeasonsViewController.swift */,
+				A913364B22E663DF00416AAD /* SeasonsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,8 +214,10 @@
 		A96C73C622E61AFD002CD4BA /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				A96C73C722E61B43002CD4BA /* PaginatedShowsInteractor.swift */,
-				A96C73C922E61BC1002CD4BA /* ShowSearchDelegate.swift */,
+				A96C73C722E61B43002CD4BA /* ShowsInteractor.swift */,
+				A96C73C922E61BC1002CD4BA /* ShowsDelegate.swift */,
+				A913365022E6720A00416AAD /* EpisodesInteractor.swift */,
+				A913365222E6727900416AAD /* EpisodesDelegate.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -208,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B55BC922E518A200310AD8 /* SearchDataSource.swift */,
+				A925B78B22E7338000076508 /* SeasonsDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -216,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B55BCF22E51EFA00310AD8 /* Show.swift */,
+				A913364E22E66D5F00416AAD /* Episode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +245,7 @@
 			children = (
 				A9B55BCD22E51C2700310AD8 /* ServiceContext.swift */,
 				A9B55BD122E521FB00310AD8 /* ShowsService.swift */,
+				A925B78D22E73D5000076508 /* EpisodesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -346,6 +367,7 @@
 			files = (
 				A96C73C322E606BE002CD4BA /* EntertainmentTableViewCell.xib in Resources */,
 				A965CA5022E3DA8600494C95 /* LaunchScreen.storyboard in Resources */,
+				A913364D22E663DF00416AAD /* SeasonsViewController.xib in Resources */,
 				A965CA4D22E3DA8600494C95 /* Assets.xcassets in Resources */,
 				A965CA4B22E3DA8500494C95 /* Main.storyboard in Resources */,
 			);
@@ -415,15 +437,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96C73C222E606BE002CD4BA /* EntertainmentTableViewCell.swift in Sources */,
+				A925B78C22E7338000076508 /* SeasonsDataSource.swift in Sources */,
+				A913364F22E66D5F00416AAD /* Episode.swift in Sources */,
 				A9B55BCA22E518A200310AD8 /* SearchDataSource.swift in Sources */,
 				A9B55BCE22E51C2700310AD8 /* ServiceContext.swift in Sources */,
-				A96C73C822E61B43002CD4BA /* PaginatedShowsInteractor.swift in Sources */,
+				A96C73C822E61B43002CD4BA /* ShowsInteractor.swift in Sources */,
 				A913364922E6468B00416AAD /* DetailsTableViewController.swift in Sources */,
+				A925B78E22E73D5000076508 /* EpisodesService.swift in Sources */,
 				A96C73BE22E6007A002CD4BA /* DateFormatter+Extensions.swift in Sources */,
 				A9B55BD222E521FB00310AD8 /* ShowsService.swift in Sources */,
+				A913365322E6727900416AAD /* EpisodesDelegate.swift in Sources */,
 				A965CA4622E3DA8500494C95 /* AppDelegate.swift in Sources */,
-				A96C73CA22E61BC1002CD4BA /* ShowSearchDelegate.swift in Sources */,
+				A96C73CA22E61BC1002CD4BA /* ShowsDelegate.swift in Sources */,
 				A96C73C522E6119E002CD4BA /* AlertHelper.swift in Sources */,
+				A913364C22E663DF00416AAD /* SeasonsViewController.swift in Sources */,
+				A913365122E6720A00416AAD /* EpisodesInteractor.swift in Sources */,
 				A9B55BD022E51EFA00310AD8 /* Show.swift in Sources */,
 				A9B55BC722E516C300310AD8 /* SearchShowsViewController.swift in Sources */,
 			);

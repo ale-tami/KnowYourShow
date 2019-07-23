@@ -9,12 +9,12 @@
 import UIKit
 import SVProgressHUD
 
-class SearchShowsViewController: UIViewController, UIScrollViewDelegate {
+class SearchShowsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     private var tableViewDataSource:SearchDataSource!
-    var paginateShowsinteractor:PaginatedShowsInteractor = PaginatedShowsInteractor()
+    var paginateShowsinteractor:ShowsInteractor = ShowsInteractor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class SearchShowsViewController: UIViewController, UIScrollViewDelegate {
     }
 }
 
-extension SearchShowsViewController:ShowSearchDelegate {
+extension SearchShowsViewController:ShowsDelegate {
     func receivedShows(shows: [Show]) {
         self.tableViewDataSource.update(shows: shows)
     }
