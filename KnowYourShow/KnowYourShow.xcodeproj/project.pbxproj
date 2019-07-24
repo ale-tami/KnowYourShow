@@ -18,6 +18,9 @@
 		A925B78C22E7338000076508 /* SeasonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78B22E7338000076508 /* SeasonsDataSource.swift */; };
 		A925B78E22E73D5000076508 /* EpisodesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78D22E73D5000076508 /* EpisodesService.swift */; };
 		A925B79022E777DB00076508 /* EpisodeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */; };
+		A926B0A622E897F2004F77BD /* SearchPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926B0A522E897F2004F77BD /* SearchPeopleViewController.swift */; };
+		A926B0AA22E89AB6004F77BD /* SearchPeopleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926B0A922E89AB6004F77BD /* SearchPeopleDataSource.swift */; };
+		A926B0AC22E89D29004F77BD /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926B0AB22E89D29004F77BD /* People.swift */; };
 		A965CA4622E3DA8500494C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965CA4522E3DA8500494C95 /* AppDelegate.swift */; };
 		A965CA4B22E3DA8500494C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4922E3DA8500494C95 /* Main.storyboard */; };
 		A965CA4D22E3DA8600494C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A965CA4C22E3DA8600494C95 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		A9B55BCE22E51C2700310AD8 /* ServiceContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B55BCD22E51C2700310AD8 /* ServiceContext.swift */; };
 		A9B55BD022E51EFA00310AD8 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B55BCF22E51EFA00310AD8 /* Show.swift */; };
 		A9B55BD222E521FB00310AD8 /* ShowsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B55BD122E521FB00310AD8 /* ShowsService.swift */; };
+		A9E0057122E8D6FB003EE5A6 /* PeopleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0057022E8D6FB003EE5A6 /* PeopleInteractor.swift */; };
+		A9E0057322E8D8C4003EE5A6 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0057222E8D8C4003EE5A6 /* PeopleService.swift */; };
+		A9E0057522E918B8003EE5A6 /* PeopleDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0057422E918B8003EE5A6 /* PeopleDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,9 @@
 		A925B78B22E7338000076508 /* SeasonsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsDataSource.swift; sourceTree = "<group>"; };
 		A925B78D22E73D5000076508 /* EpisodesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesService.swift; sourceTree = "<group>"; };
 		A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailTableViewController.swift; sourceTree = "<group>"; };
+		A926B0A522E897F2004F77BD /* SearchPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPeopleViewController.swift; sourceTree = "<group>"; };
+		A926B0A922E89AB6004F77BD /* SearchPeopleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPeopleDataSource.swift; sourceTree = "<group>"; };
+		A926B0AB22E89D29004F77BD /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		A965CA4222E3DA8500494C95 /* KnowYourShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowYourShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A965CA4522E3DA8500494C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A965CA4A22E3DA8500494C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +100,9 @@
 		A9B55BCD22E51C2700310AD8 /* ServiceContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContext.swift; sourceTree = "<group>"; };
 		A9B55BCF22E51EFA00310AD8 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		A9B55BD122E521FB00310AD8 /* ShowsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsService.swift; sourceTree = "<group>"; };
+		A9E0057022E8D6FB003EE5A6 /* PeopleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInteractor.swift; sourceTree = "<group>"; };
+		A9E0057222E8D8C4003EE5A6 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		A9E0057422E918B8003EE5A6 /* PeopleDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,44 @@
 				1D78968E1908E7B08E6B44E4 /* Pods_KnowYourShow.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A926B0A322E897A1004F77BD /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				A913364822E6468A00416AAD /* DetailsTableViewController.swift */,
+				A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */,
+				A913364A22E663DF00416AAD /* SeasonsViewController.swift */,
+				A913364B22E663DF00416AAD /* SeasonsViewController.xib */,
+				A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		A926B0A422E897B4004F77BD /* People */ = {
+			isa = PBXGroup;
+			children = (
+				A926B0A522E897F2004F77BD /* SearchPeopleViewController.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		A926B0A722E89A37004F77BD /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				A9B55BC922E518A200310AD8 /* SearchDataSource.swift */,
+				A925B78B22E7338000076508 /* SeasonsDataSource.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		A926B0A822E89A41004F77BD /* People */ = {
+			isa = PBXGroup;
+			children = (
+				A926B0A922E89AB6004F77BD /* SearchPeopleDataSource.swift */,
+				A9E0057422E918B8003EE5A6 /* PeopleDetailTableViewController.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 		A965CA3922E3DA8500494C95 = {
@@ -189,11 +239,8 @@
 		A965CA7322E3DABC00494C95 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A913364822E6468A00416AAD /* DetailsTableViewController.swift */,
-				A9B55BC622E516C300310AD8 /* SearchShowsViewController.swift */,
-				A913364A22E663DF00416AAD /* SeasonsViewController.swift */,
-				A913364B22E663DF00416AAD /* SeasonsViewController.xib */,
-				A925B78F22E777DB00076508 /* EpisodeDetailTableViewController.swift */,
+				A926B0A422E897B4004F77BD /* People */,
+				A926B0A322E897A1004F77BD /* Shows */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,10 +266,8 @@
 		A96C73C622E61AFD002CD4BA /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				A96C73C722E61B43002CD4BA /* ShowsInteractor.swift */,
-				A96C73C922E61BC1002CD4BA /* ShowsDelegate.swift */,
-				A913365022E6720A00416AAD /* EpisodesInteractor.swift */,
-				A913365222E6727900416AAD /* EpisodesDelegate.swift */,
+				A9E0056F22E8D612003EE5A6 /* People */,
+				A9E0056E22E8D605003EE5A6 /* Shows */,
 				A921E79D22E7CB9500264930 /* BaseDelegate.swift */,
 			);
 			path = Interactors;
@@ -231,8 +276,8 @@
 		A9B55BC822E5184D00310AD8 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				A9B55BC922E518A200310AD8 /* SearchDataSource.swift */,
-				A925B78B22E7338000076508 /* SeasonsDataSource.swift */,
+				A926B0A822E89A41004F77BD /* People */,
+				A926B0A722E89A37004F77BD /* Shows */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -242,6 +287,7 @@
 			children = (
 				A9B55BCF22E51EFA00310AD8 /* Show.swift */,
 				A913364E22E66D5F00416AAD /* Episode.swift */,
+				A926B0AB22E89D29004F77BD /* People.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,8 +298,28 @@
 				A9B55BCD22E51C2700310AD8 /* ServiceContext.swift */,
 				A9B55BD122E521FB00310AD8 /* ShowsService.swift */,
 				A925B78D22E73D5000076508 /* EpisodesService.swift */,
+				A9E0057222E8D8C4003EE5A6 /* PeopleService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A9E0056E22E8D605003EE5A6 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				A96C73C722E61B43002CD4BA /* ShowsInteractor.swift */,
+				A96C73C922E61BC1002CD4BA /* ShowsDelegate.swift */,
+				A913365022E6720A00416AAD /* EpisodesInteractor.swift */,
+				A913365222E6727900416AAD /* EpisodesDelegate.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		A9E0056F22E8D612003EE5A6 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				A9E0057022E8D6FB003EE5A6 /* PeopleInteractor.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 		BA8FAD24F817FF67CFC285A8 /* Pods */ = {
@@ -443,6 +509,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96C73C222E606BE002CD4BA /* EntertainmentTableViewCell.swift in Sources */,
+				A9E0057522E918B8003EE5A6 /* PeopleDetailTableViewController.swift in Sources */,
+				A9E0057122E8D6FB003EE5A6 /* PeopleInteractor.swift in Sources */,
 				A925B78C22E7338000076508 /* SeasonsDataSource.swift in Sources */,
 				A913364F22E66D5F00416AAD /* Episode.swift in Sources */,
 				A9B55BCA22E518A200310AD8 /* SearchDataSource.swift in Sources */,
@@ -457,10 +525,14 @@
 				A96C73CA22E61BC1002CD4BA /* ShowsDelegate.swift in Sources */,
 				A96C73C522E6119E002CD4BA /* AlertHelper.swift in Sources */,
 				A913364C22E663DF00416AAD /* SeasonsViewController.swift in Sources */,
+				A926B0AA22E89AB6004F77BD /* SearchPeopleDataSource.swift in Sources */,
 				A913365122E6720A00416AAD /* EpisodesInteractor.swift in Sources */,
 				A9B55BD022E51EFA00310AD8 /* Show.swift in Sources */,
+				A9E0057322E8D8C4003EE5A6 /* PeopleService.swift in Sources */,
 				A925B79022E777DB00076508 /* EpisodeDetailTableViewController.swift in Sources */,
 				A9B55BC722E516C300310AD8 /* SearchShowsViewController.swift in Sources */,
+				A926B0AC22E89D29004F77BD /* People.swift in Sources */,
+				A926B0A622E897F2004F77BD /* SearchPeopleViewController.swift in Sources */,
 				A921E79E22E7CB9500264930 /* BaseDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,7 @@ struct Show: Codable {
     var imageMediumUrl:String?
     var imageLargeUrl:String?
     var rate:Float?
+    var image:[String:String]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -38,11 +39,6 @@ struct Show: Codable {
         case average
     }
     
-    enum ImageKeys:String, CodingKey {
-        case medium
-        case original
-    }
-    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy:
             CodingKeys.self)
@@ -55,9 +51,11 @@ struct Show: Codable {
         officialSite = try container.decodeIfPresent(String.self, forKey: .officialSite)
         summary = try container.decode(String.self, forKey: .summary)
         
-        let imageContainer = try container.nestedContainer(keyedBy: ImageKeys.self, forKey: .image)
-        imageLargeUrl = try imageContainer.decodeIfPresent(String.self, forKey: .original)
-        imageMediumUrl = try imageContainer.decodeIfPresent(String.self, forKey: .medium)
+        image = try container.decodeIfPresent([String:String].self, forKey: .image)
+        if let img = image {
+            imageMediumUrl = img["medium"]
+            imageLargeUrl = img["original"]
+        }
         
         let rateContainer = try container.nestedContainer(keyedBy: RatinKeys.self, forKey: .rating)
         rate = try rateContainer.decodeIfPresent(Float.self, forKey: .average)
@@ -74,10 +72,7 @@ struct Show: Codable {
         try container.encodeIfPresent(premiered, forKey: .premiered)
         try container.encodeIfPresent(officialSite, forKey: .officialSite)
         try container.encode(summary, forKey: .summary)
-        
-        var imageContainer = container.nestedContainer(keyedBy: ImageKeys.self, forKey: .image)
-        try imageContainer.encodeIfPresent(imageLargeUrl, forKey: .original)
-        try imageContainer.encodeIfPresent(imageMediumUrl, forKey: .medium)
+        try container.encodeIfPresent(image, forKey: .image)
         
         var rateContainer = container.nestedContainer(keyedBy: RatinKeys.self, forKey: .rating)
         try rateContainer.encodeIfPresent(rate, forKey: .average)
