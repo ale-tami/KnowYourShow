@@ -17,7 +17,7 @@ class SeasonsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var tableViewDataSource:SeasonsDataSource!
-    private var episodesInteractor:EpisodesInteractor = EpisodesInteractor()
+    private var episodesInteractor:EpisodesInteractor<SeasonsViewController> = EpisodesInteractor()
     var showId:Int!
     var delegate:SeasonsViewControllerDelegate?
     
@@ -47,19 +47,22 @@ class SeasonsViewController: UIViewController {
     }
     
 }
-extension SeasonsViewController: EpisodesDelegate {
-    func receivedEpisodes(episodes: [[Episode]]) {
-        self.tableViewDataSource.update(episodes: episodes)
-        self.delegate?.didFinishLoading()
-    }
-    
-    func failedToReceiveEpisodes(errorStr: String) {
-        AlertHelper.presentErrorAlert(with: errorStr, in: self)
-    }
-}
 
 extension SeasonsViewController:SeasonDataSourceDelegate {
     func episodeSelected(episode: Episode) {
         self.delegate?.didSelectEpisode(episode: episode)
     }
+}
+
+extension SeasonsViewController:BaseDelegate {
+    typealias T = [[Episode]]
+    func received(objects: [[Episode]]) {
+        self.tableViewDataSource.update(episodes: objects)
+        self.delegate?.didFinishLoading()
+    }
+    
+    func failedToReceiveObjects(errorStr: String) {
+        AlertHelper.presentErrorAlert(with: errorStr, in: self)
+    }
+    
 }

@@ -9,9 +9,10 @@
 import UIKit
 import SVProgressHUD
 
-class ShowsInteractor {
+class ShowsInteractor <Delegate:BaseDelegate> where Delegate.T == [Show]{
+    typealias DelegateType = Delegate
+    var delegate:DelegateType?
     
-    var delegate:ShowsDelegate?
     private var page:Int = 0
     private var shows:[Show] = []
     
@@ -22,13 +23,13 @@ class ShowsInteractor {
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
                 self.shows.append(contentsOf: shows)
-                self.delegate?.receivedShows(shows: self.shows)
+                self.delegate?.received(objects: self.shows)
                 self.page += 1
             }
         }, failureHandler: { [unowned self] (str) in
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
-                self.delegate?.failedToReceiveShow(errorStr: str)
+                self.delegate?.failedToReceiveObjects(errorStr: str)
             }
         })
     }
@@ -39,15 +40,15 @@ class ShowsInteractor {
     
     func getShows(with str:String) {
         SVProgressHUD.show()
-        ShowsService().getAllShows(with: self.page, successHandler: { [unowned self] (shows) in
+        ShowsService().getShows(with:str, successHandler: { [unowned self] (shows) in
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
-                self.delegate?.receivedShows(shows: shows)
+                self.delegate?.received(objects: shows)
             }
             }, failureHandler: { [unowned self] (str) in
                 SVProgressHUD.dismiss()
                 DispatchQueue.main.async {
-                    self.delegate?.failedToReceiveShow(errorStr: str)
+                    self.delegate?.failedToReceiveObjects(errorStr: str)
                 }
         })
     }

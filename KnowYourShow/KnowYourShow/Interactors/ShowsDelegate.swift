@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alejandro Cesar Tami. All rights reserved.
 //
 
-
+@available(iOS, unavailable)
 protocol ShowsDelegate {
     func receivedShows(shows:[Show])
     func failedToReceiveShow(errorStr:String)
