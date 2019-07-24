@@ -14,7 +14,7 @@ class SearchShowsViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     private var tableViewDataSource:SearchDataSource!
-    var paginateShowsinteractor:ShowsInteractor = ShowsInteractor()
+    var paginateShowsinteractor:ShowsInteractor<SearchShowsViewController> = ShowsInteractor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,19 +51,21 @@ class SearchShowsViewController: UIViewController {
     }
 }
 
-extension SearchShowsViewController:ShowsDelegate {
-    func receivedShows(shows: [Show]) {
-        self.tableViewDataSource.update(shows: shows)
-    }
-    
-    func failedToReceiveShow(errorStr: String) {
-        AlertHelper.presentErrorAlert(with: errorStr, in: self)
-    }
-    
-}
-
 extension SearchShowsViewController:SearchDataSourceDelegate {
     func showSelected(show: Show) {
          self.performSegue(withIdentifier: "toDetails", sender: show)
     }
+}
+
+extension SearchShowsViewController:BaseDelegate  {
+    typealias T = [Show]
+
+    func received(objects: [Show]) {
+        self.tableViewDataSource.update(shows: objects)
+    }
+    
+    func failedToReceiveObjects(errorStr: String) {
+        AlertHelper.presentErrorAlert(with: errorStr, in: self)
+    }
+    
 }

@@ -32,8 +32,6 @@ struct Episode: Codable {
         case airdate
         case airtime
         case summary
-        case imageMediumUrl
-        case imageLargeUrl
         case image
     }
     

@@ -9,8 +9,9 @@
 import UIKit
 import SVProgressHUD
 
-class EpisodesInteractor {
-    var delegate:EpisodesDelegate?
+class EpisodesInteractor <Delegate:BaseDelegate> where Delegate.T == [[Episode]]{
+    typealias DelegateType = Delegate
+    var delegate:DelegateType?
     private var episodes:[[Episode]] = []
     
     func getEpisodes(for showId:Int) {
@@ -31,12 +32,12 @@ class EpisodesInteractor {
                     }
                 }
                 arrayOfEpisodes.append(epiAux)
-                self.delegate?.receivedEpisodes(episodes: arrayOfEpisodes)
+                self.delegate?.received(objects: arrayOfEpisodes)
             }
             }, failureHandler: { [unowned self] (str) in
                 SVProgressHUD.dismiss()
                 DispatchQueue.main.async {
-                    self.delegate?.failedToReceiveEpisodes(errorStr: str)
+                    self.delegate?.failedToReceiveObjects(errorStr: str)
                 }
         })
     }

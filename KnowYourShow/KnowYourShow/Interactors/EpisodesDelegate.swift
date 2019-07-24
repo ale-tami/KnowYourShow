@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@available(iOS, unavailable)
 protocol EpisodesDelegate {
     func receivedEpisodes(episodes:[[Episode]])
     func failedToReceiveEpisodes(errorStr:String)
