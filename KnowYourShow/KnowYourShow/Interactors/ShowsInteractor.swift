@@ -40,10 +40,10 @@ class ShowsInteractor <Delegate:BaseDelegate> where Delegate.T == [Show]{
     
     func getShows(with str:String) {
         SVProgressHUD.show()
-        ShowsService().getAllShows(with: self.page, successHandler: { [unowned self] (shows) in
+        ShowsService().getShows(with:str, successHandler: { [unowned self] (shows) in
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
-                self.delegate?.received(objects: self.shows)
+                self.delegate?.received(objects: shows)
             }
             }, failureHandler: { [unowned self] (str) in
                 SVProgressHUD.dismiss()
