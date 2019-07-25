@@ -41,20 +41,17 @@ class SearchPeopleViewController: UIViewController {
         self.searchBar.placeholder = "Search by Person's name"
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let person = sender as? People else { return }
+        if let vc = segue.destination as? PeopleDetailTableViewController{
+            vc.person = person
+        }
     }
-    */
 
 }
 extension SearchPeopleViewController:SearchPeopleDataSourceDelegate {
     func showSelected(people: People) {
-        self.performSegue(withIdentifier: "toDetails", sender: show)
+        self.performSegue(withIdentifier: "toPersonsDetails", sender: people)
     }
 }
 

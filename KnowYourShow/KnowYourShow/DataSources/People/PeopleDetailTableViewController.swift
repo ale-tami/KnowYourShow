@@ -9,82 +9,78 @@
 import UIKit
 
 class PeopleDetailTableViewController: UITableViewController {
-
+    @IBOutlet weak var portraitImageView: UIImageView!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var dodLabel: UILabel!
+    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var dobLabel: UILabel!
+    
+    var person:People!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.setupViews()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func setupViews(){
+        self.tableView.allowsSelection = false
+        self.tableView.tableFooterView = UIView()
+        self.tableView.estimatedRowHeight = 44
+        
+        if let urlStr = self.person.imageLargeUrl, let url = URL(string: urlStr) {
+            self.portraitImageView.kf.indicatorType = .activity
+            self.portraitImageView.kf.setImage(with: url)
+        }
+        
+        self.portraitImageView?.layer.cornerRadius = 10
+        self.portraitImageView?.layer.masksToBounds = true
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor(red: 0, green: 111/255, blue: 255/255, alpha: 1)]
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.title = "\(self.person.name)"
+        self.genderLabel.text = self.person.gender
+        
+        if let dob = self.person.birthday {
+            let date = DateFormatter.formatForReceivingDate.date(from:dob)
+            let d = DateFormatter.formatForShowingDate.string(from: date ?? Date())
+            self.dobLabel.text = d
+        }
+        
+        if let dod = self.person.deathday {
+            let date = DateFormatter.formatForReceivingDate.date(from:dod)
+            let d = DateFormatter.formatForShowingDate.string(from: date ?? Date())
+            self.dodLabel.text = d
+        }
+        
+        self.urlLabel.text = self.person.url
+        self.urlLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openSafari)))
+        self.urlLabel.isUserInteractionEnabled = true
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    @objc func openSafari() {
+        if let url = URL(string:self.person.url) {
+            UIApplication.shared.open(url)
+        }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return  218
+        } else if indexPath.row == 1 {
+            guard let _ = self.person.birthday else {
+                return 0
+            }
+        } else if indexPath.row == 2 {
+            guard let _ = self.person.gender else {
+                return 0
+            }
+        } else if indexPath.row == 3{
+            guard let _ = self.person.deathday else {
+                return 0
+            }
+        }
+        
+        return UITableView.automaticDimension
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

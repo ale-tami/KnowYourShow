@@ -52,7 +52,7 @@ extension SearchPeopleDataSource: UITableViewDataSource {
             })
         }
         
-        cell?.imageView?.layer.cornerRadius = 23
+        cell?.imageView?.layer.cornerRadius = 22
         cell?.imageView?.layer.borderColor = UIColor.white.cgColor
         cell?.imageView?.layer.borderWidth = 1
         cell?.imageView?.layer.masksToBounds = true
